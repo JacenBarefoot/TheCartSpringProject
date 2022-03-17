@@ -1,0 +1,18 @@
+img{
+    width: 270px;
+    height: 300px;
+}
+.card {
+    padding: 1.5em;
+    width: 17em;
+    margin: auto;
+    height: 21.5em;
+    color: black;
+    border: solid 1px black;
+    align-items: center;
+}
+#wholeContainer{
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-bottom: 2%;
+}

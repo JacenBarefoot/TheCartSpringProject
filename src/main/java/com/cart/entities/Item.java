@@ -2,7 +2,17 @@ package com.cart.entities;
 
 public class Item {
     private Product product;
+
+    private Skateboard skateboard;
     private int quantity;
+
+    public Skateboard getSkateboard() {
+        return skateboard;
+    }
+
+    public void setSkateboard(Skateboard skateboard) {
+        this.skateboard = skateboard;
+    }
 
     public Product getProduct() {
         return product;
@@ -20,11 +30,9 @@ public class Item {
         this.quantity = quantity;
     }
 
-    public Item() {
-    }
-
-    public Item(Product product, int quantity) {
+    public Item(Product product, Skateboard skateboard, int quantity) {
         this.product = product;
+        this.skateboard = skateboard;
         this.quantity = quantity;
     }
 }
