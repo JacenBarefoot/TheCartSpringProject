@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Boards Page</title>
+    <title>Hoodie Page</title>
 </head>
 <style>
     nav {
@@ -124,27 +124,26 @@
     <a href="${pageContext.request.contextPath }/cart/index">Carts</a>
 </nav>
 <br>
-<h2>Skateboards</h2>
+
+<h2>Hoodies</h2>
 <table cellpadding="12" cellspacing="12" border="2">
     <tr>
         <th>Id</th>
-        <th>Brand Name</th>
-        <th>Board Size</th>
-        <th>Wheel Size</th>
-        <th>Wheel Color</th>
+        <th>Brand</th>
+        <th>Size</th>
+        <th>Color</th>
         <th>Price</th>
         <th>Option</th>
     </tr>
-    <c:forEach var="skateboard" items="${skateboards }">
+    <c:forEach var="hoodie" items="${hoodies }">
         <tr>
-            <td>${skateboard.id }</td>
-            <td>${skateboard.boardBrand }</td>
-            <td>${skateboard.boardSize}in</td>
-            <td>${skateboard.wheelSize }cm</td>
-            <td>${skateboard.wheelColor }</td>
-            <td>$${skateboard.price }</td>
+            <td>${hoodie.id }</td>
+            <td>${hoodie.hoodieBrand }</td>
+            <td>${hoodie.hoodieSize }</td>
+            <td>${hoodie.hoodieColor }</td>
+            <td>$${hoodie.price }</td>
             <td align="center">
-                <a href="${pageContext.request.contextPath }/cart/buyBoards/${skateboard.id}"
+                <a href="${pageContext.request.contextPath }/cart/buyHoodies/${hoodie.id}"
                    onclick="return confirm('Added to cart!!')">Buy Now</a>
             </td>
         </tr>

@@ -1,19 +1,19 @@
 package com.cart.controllers;
 
+import com.cart.models.ShoeModel;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import com.cart.models.ProductModel;
 
 @Controller
-@RequestMapping(value = "product")
-public class ProductController {
+@RequestMapping(value = "shoe")
+public class ShoeController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String index(ModelMap modelMap) {
-        ProductModel productModel = new ProductModel();
-        modelMap.put("products", productModel.findAll());
-        return "product/index";
+        ShoeModel shoeModel = new ShoeModel();
+        modelMap.put("shoes", shoeModel.findAll());
+        return "shoe/index";
     }
 }

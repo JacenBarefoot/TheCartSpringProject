@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Boards Page</title>
+    <title>Backpacks Page</title>
 </head>
 <style>
     nav {
@@ -124,28 +124,28 @@
     <a href="${pageContext.request.contextPath }/cart/index">Carts</a>
 </nav>
 <br>
-<h2>Skateboards</h2>
+<h2>Backpacks</h2>
 <table cellpadding="12" cellspacing="12" border="2">
     <tr>
         <th>Id</th>
-        <th>Brand Name</th>
-        <th>Board Size</th>
-        <th>Wheel Size</th>
-        <th>Wheel Color</th>
+        <th>Brand</th>
+        <th>Size</th>
+        <th>Color</th>
+        <th>Waterproof?</th>
         <th>Price</th>
         <th>Option</th>
     </tr>
-    <c:forEach var="skateboard" items="${skateboards }">
+    <c:forEach var="backpack" items="${backpacks }">
         <tr>
-            <td>${skateboard.id }</td>
-            <td>${skateboard.boardBrand }</td>
-            <td>${skateboard.boardSize}in</td>
-            <td>${skateboard.wheelSize }cm</td>
-            <td>${skateboard.wheelColor }</td>
-            <td>$${skateboard.price }</td>
+            <td>${backpack.id }</td>
+            <td>${backpack.bagBrand }</td>
+            <td>${backpack.bagSize }</td>
+            <td>${backpack.bagColor }</td>
+            <td>${backpack.isWaterproof }</td>
+            <td>$${backpack.price }</td>
             <td align="center">
-                <a href="${pageContext.request.contextPath }/cart/buyBoards/${skateboard.id}"
-                   onclick="return confirm('Added to cart!!')">Buy Now</a>
+                <a href="${pageContext.request.contextPath }/cart/buyBackpacks/${backpack.id}"
+                onclick="return confirm('Added to cart!!')">Buy Now</a>
             </td>
         </tr>
     </c:forEach>
